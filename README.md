@@ -1,4 +1,4 @@
-## babim/onlyoffice-document-server with vietnamese font
+##thimico/onlyoffice with fonts
 
 * [Overview](#overview)
 * [Functionality](#functionality)
