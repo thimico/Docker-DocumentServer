@@ -48,7 +48,7 @@ Integrating it with ONLYOFFICE Community Server you will be able to:
 
 ## Running Docker Image
 
-    sudo docker run -i -t -d -p 80:80 onlyoffice/documentserver
+    sudo docker run -i -t -d -p 80:80 thimico/onlyoffice
 
 Use this command if you wish to install ONLYOFFICE Document Server separately. To install ONLYOFFICE Document Server integrated with Community and Mail Servers, refer to the corresponding instructions below.
 
@@ -64,14 +64,14 @@ To get access to your data from outside the container, you need to mount the vol
 
     sudo docker run -i -t -d -p 80:80 \
         -v /app/onlyoffice/DocumentServer/logs:/var/log/onlyoffice  \
-        -v /app/onlyoffice/DocumentServer/data:/var/www/onlyoffice/Data  onlyoffice/documentserver
+        -v /app/onlyoffice/DocumentServer/data:/var/www/onlyoffice/Data  thimico/onlyoffice
 
 Storing the data on the host machine allows you to easily update ONLYOFFICE once the new version is released without losing your data.
 
 ### Running ONLYOFFICE Document Server using HTTPS
 
         sudo docker run -i -t -d -p 443:443 \
-        -v /app/onlyoffice/DocumentServer/data:/var/www/onlyoffice/Data  onlyoffice/documentserver
+        -v /app/onlyoffice/DocumentServer/data:/var/www/onlyoffice/Data  thimico/onlyoffice
 
 Access to the onlyoffice application can be secured using SSL so as to prevent unauthorized access. While a CA certified SSL certificate allows for verification of trust via the CA, a self signed certificates can also provide an equal level of trust verification as long as each client takes some additional steps to verify the identity of your website. Below the instructions on achieving this are provided.
 
